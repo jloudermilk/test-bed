@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://jj8oe5g0fiy4"]
+
+[ext_resource type="PackedScene" uid="uid://dlmybc0dmy0te" path="res://debug/debugwindow.tscn" id="1_5oeks"]
+
+[node name="TestScene" type="Node3D"]
+
+[node name="DebugWindow" parent="." instance=ExtResource("1_5oeks")]
