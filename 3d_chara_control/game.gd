@@ -10,9 +10,6 @@ func _input(event: InputEvent) -> void:
 func _ready() -> void:
 	Events.connect("kill_plane_touched",reloadlevel)
 	Events.connect("flag_reached",reloadlevel)
-	for autoload in get_tree().root.get_children():
-		if autoload != get_tree().get_current_scene():
-			print(autoload)
 	pass
 func reloadlevel() -> void:
 	get_tree().call_deferred("reload_current_scene")
