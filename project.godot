@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="test-bed"
-run/main_scene="res://test_scene.tscn"
+run/main_scene="res://logger/test_scene.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-CustomDebug="*res://debug/CustomDebug.gd"
+Events="*res://3d_chara_control/autoload/events.gd"
 
 [display]
 

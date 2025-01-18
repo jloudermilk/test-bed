@@ -1,0 +1,1 @@
+3d_chara_control/autoload/events.gd needs to be added to Project -> Project Settings -> Globals

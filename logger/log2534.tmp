@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlmybc0dmy0te"]
+
+[ext_resource type="PackedScene" uid="uid://ba4khfebyfgvr" path="res://logger/loggertext.tscn" id="1_b0vx6"]
+[ext_resource type="Script" path="res://logger/customlogger.gd" id="1_scv30"]
+
+[node name="LoggerWindow" type="Window"]
+title = "DebugWindow"
+position = Vector2i(0, 36)
+size = Vector2i(600, 600)
+min_size = Vector2i(100, 100)
+max_size = Vector2i(1000, 1000)
+script = ExtResource("1_scv30")
+loggerStrings = null
+
+[node name="LoggerTextPanel" parent="." instance=ExtResource("1_b0vx6")]
