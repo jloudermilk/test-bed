@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ciw2hwm3lvxgq"]
+
+[ext_resource type="Script" uid="uid://boc06donexnnm" path="res://WFC/wfc_test.gd" id="1_2q4eb"]
+
+[node name="WaveFunctionCollapse3D" type="Node3D"]
+script = ExtResource("1_2q4eb")
