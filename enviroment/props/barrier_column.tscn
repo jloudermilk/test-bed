@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cetali077bper"]
+
+[ext_resource type="PackedScene" uid="uid://cylgkx3p0w83l" path="res://KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/barrier_column.gltf" id="1_oq4h2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6xu1p"]
+size = Vector3(2, 1.05, 0.5)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4g2hd"]
+height = 1.6
+
+[node name="barrier_column" instance=ExtResource("1_oq4h2")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="barrier_column" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="barrier_column/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.55, 0)
+shape = SubResource("BoxShape3D_6xu1p")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="barrier_column/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.55, 0)
+shape = SubResource("BoxShape3D_6xu1p")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="barrier_column/StaticBody3D" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.644905, 0)
+shape = SubResource("CapsuleShape3D_4g2hd")

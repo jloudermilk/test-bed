@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://nxnx5jjyeifr"]
+
+[ext_resource type="PackedScene" uid="uid://5jx2qkye2dd" path="res://KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/chair.gltf" id="1_8yb34"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k4pgr"]
+size = Vector3(0.75, 0.503, 0.75)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_spry8"]
+size = Vector3(0.2, 0.75, 0.752441)
+
+[node name="chair" instance=ExtResource("1_8yb34")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="chair" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="chair/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.254008, 0.00405958)
+shape = SubResource("BoxShape3D_k4pgr")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="chair/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.861169, 0.00279835)
+shape = SubResource("BoxShape3D_spry8")

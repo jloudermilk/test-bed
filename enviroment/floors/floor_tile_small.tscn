@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://r0td0aqhi4f7"]
+
+[ext_resource type="PackedScene" uid="uid://13cl3ifkwpav" path="res://KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/floor_tile_small.gltf" id="1_0s7dm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_24g1j"]
+size = Vector3(2, 0.2, 2)
+
+[node name="floor_tile_small" instance=ExtResource("1_0s7dm")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor_tile_small" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor_tile_small/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+shape = SubResource("BoxShape3D_24g1j")

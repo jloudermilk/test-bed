@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bohrehcywr4lj"]
+
+[ext_resource type="PackedScene" uid="uid://b7bmgemmaxfpd" path="res://KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/barrel_small.gltf" id="1_hufc5"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_m0qtv"]
+height = 1.0
+radius = 0.45
+
+[node name="barrel_small" instance=ExtResource("1_hufc5")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="barrel_small" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_small/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("CylinderShape3D_m0qtv")

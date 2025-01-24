@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://vyp3wwpmki1l"]
+
+[ext_resource type="PackedScene" uid="uid://dmebp0dlk5ynd" path="res://KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_corner.gltf" id="1_pcm1m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ibp1"]
+size = Vector3(1, 4, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5tf70"]
+size = Vector3(1, 4, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s1xrp"]
+size = Vector3(2, 4, 1)
+
+[node name="wall_corner" instance=ExtResource("1_pcm1m")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall_corner" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall_corner/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 1)
+shape = SubResource("BoxShape3D_2ibp1")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wall_corner/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+shape = SubResource("BoxShape3D_5tf70")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="wall_corner/StaticBody3D" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 0)
+shape = SubResource("BoxShape3D_s1xrp")

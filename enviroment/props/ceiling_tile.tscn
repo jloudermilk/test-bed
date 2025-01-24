@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://wtjursxydc21"]
+
+[ext_resource type="PackedScene" uid="uid://dso2t6ns550it" path="res://KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/ceiling_tile.gltf" id="1_rj8mj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_swtgl"]
+size = Vector3(4, 0.15, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jlif0"]
+size = Vector3(4, 0.204497, 0.399951)
+
+[node name="ceiling_tile" instance=ExtResource("1_rj8mj")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ceiling_tile" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ceiling_tile/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0285368, 0)
+shape = SubResource("BoxShape3D_swtgl")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ceiling_tile/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.149056, 1)
+shape = SubResource("BoxShape3D_jlif0")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="ceiling_tile/StaticBody3D" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.149127, -1.00337)
+shape = SubResource("BoxShape3D_jlif0")

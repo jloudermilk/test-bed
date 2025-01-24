@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp5mdf8owpdur"]
+
+[ext_resource type="PackedScene" uid="uid://bah6fq8e0utkq" path="res://KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/floor_tile_small_weeds_A.gltf" id="1_y5uw4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7luso"]
+size = Vector3(2, 0.2, 2)
+
+[node name="floor_tile_small_weeds_A" instance=ExtResource("1_y5uw4")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor_tile_small_weeds_A" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor_tile_small_weeds_A/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+shape = SubResource("BoxShape3D_7luso")

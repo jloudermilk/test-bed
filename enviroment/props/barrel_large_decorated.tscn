@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://brrabgmps646t"]
+
+[ext_resource type="PackedScene" uid="uid://uuyxkneasmm8" path="res://KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/barrel_large_decorated.gltf" id="1_65dvy"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xvfe8"]
+radius = 0.9
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mjdgi"]
+height = 0.75
+radius = 0.55
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cffje"]
+radius = 0.22
+height = 1.0
+
+[node name="barrel_large_decorated" instance=ExtResource("1_65dvy")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="barrel_large_decorated" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="barrel_large_decorated/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_xvfe8")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="barrel_large_decorated/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
+shape = SubResource("CylinderShape3D_mjdgi")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="barrel_large_decorated/StaticBody3D" index="2"]
+transform = Transform3D(0.798289, -0.602275, 2.63263e-08, 0, -4.37114e-08, -1, 0.602275, 0.798289, -3.48943e-08, 0.647864, 0.171972, 0.531355)
+shape = SubResource("CapsuleShape3D_cffje")
