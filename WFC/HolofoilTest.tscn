@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://bm64ltrapik0o"]
+
+[ext_resource type="Texture2D" uid="uid://egtccp701ud8" path="res://justinface.jpg" id="1_8t7wb"]
+[ext_resource type="Material" uid="uid://dce2gxdg77xk2" path="res://compound_foil.tres" id="2_23lhy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8hm8c"]
+next_pass = ExtResource("2_23lhy")
+cull_mode = 2
+albedo_texture = ExtResource("1_8t7wb")
+
+[sub_resource type="QuadMesh" id="QuadMesh_i52y1"]
+material = SubResource("StandardMaterial3D_8hm8c")
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("QuadMesh_i52y1")

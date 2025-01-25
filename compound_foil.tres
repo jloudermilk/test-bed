@@ -1,0 +1,27 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://dce2gxdg77xk2"]
+
+[ext_resource type="Material" uid="uid://bdkpq1moftfnm" path="res://holo_stars.tres" id="1_5fd2a"]
+[ext_resource type="Shader" uid="uid://cwhjkcu8s5fsd" path="res://holofoil.gdshader" id="2_bwu5o"]
+[ext_resource type="Texture2D" uid="uid://7y7vup8mt1sl" path="res://spell.png" id="3_uby7i"]
+
+[sub_resource type="Gradient" id="Gradient_53n68"]
+offsets = PackedFloat32Array(0.496552, 0.535632, 0.581609)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_gsk0n"]
+gradient = SubResource("Gradient_53n68")
+
+[resource]
+render_priority = 0
+next_pass = ExtResource("1_5fd2a")
+shader = ExtResource("2_bwu5o")
+shader_parameter/foil = ExtResource("3_uby7i")
+shader_parameter/threshold = 0.05
+shader_parameter/effect_alpha_mult = 1.0
+shader_parameter/direction = 0.537
+shader_parameter/specular = 1.0
+shader_parameter/metallic = 0.75
+shader_parameter/roughness = 0.75
+shader_parameter/emission_energy = 0.2
+shader_parameter/gradient = SubResource("GradientTexture1D_gsk0n")
+shader_parameter/reflectiveShift = null

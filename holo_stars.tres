@@ -1,0 +1,27 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://bdkpq1moftfnm"]
+
+[ext_resource type="Shader" uid="uid://cwhjkcu8s5fsd" path="res://holofoil.gdshader" id="1_c4xsh"]
+[ext_resource type="Texture2D" uid="uid://c6ts4382p36e6" path="res://stars.png" id="2_y80n4"]
+
+[sub_resource type="Gradient" id="Gradient_g86ow"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.4, 0.445977, 0.494253, 0.54023, 0.588506, 0.641379, 0.696552, 0.772414)
+colors = PackedColorArray(0, 0, 0, 0, 1, 0, 0, 1, 1, 0.407843, 0, 1.07059, 1, 1, 0, 1.04314, 0, 1, 0, 1, 0, 0, 1, 2.00392, 1, 0, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ebil7"]
+gradient = SubResource("Gradient_g86ow")
+width = 16
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_c4xsh")
+shader_parameter/foil = ExtResource("2_y80n4")
+shader_parameter/threshold = 0.025
+shader_parameter/effect_alpha_mult = 0.785
+shader_parameter/direction = 0.0
+shader_parameter/specular = 1.0
+shader_parameter/metallic = 0.192
+shader_parameter/roughness = 1.0
+shader_parameter/emission_energy = 0.679
+shader_parameter/gradient = SubResource("GradientTexture1D_ebil7")
+shader_parameter/reflectiveShift = 0.29

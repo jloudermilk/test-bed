@@ -1,0 +1,29 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://be3wmrp836ucu"]
+
+[ext_resource type="Shader" uid="uid://cwhjkcu8s5fsd" path="res://holofoil.gdshader" id="1_g86ow"]
+[ext_resource type="Texture2D" uid="uid://7y7vup8mt1sl" path="res://spell.png" id="2_g86ow"]
+
+[sub_resource type="Gradient" id="Gradient_g86ow"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.493917, 0.581509, 0.654501)
+colors = PackedColorArray(0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ebil7"]
+gradient = SubResource("Gradient_g86ow")
+width = 16
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_g86ow")
+shader_parameter/foil = ExtResource("2_g86ow")
+shader_parameter/threshold = 0.095
+shader_parameter/effect_alpha_mult = 1.0
+shader_parameter/direction = 1.0
+shader_parameter/specular = 1.0
+shader_parameter/metallic = 0.2
+shader_parameter/roughness = 0.67
+shader_parameter/emission_energy = 0.506
+shader_parameter/gradient = SubResource("GradientTexture1D_ebil7")
+shader_parameter/reflectiveAngle = Vector2(0.91, 2.3)
+shader_parameter/paralax = Vector2(4.165, 0.975)
+shader_parameter/size = 2.462
