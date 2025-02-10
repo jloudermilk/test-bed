@@ -2,13 +2,17 @@
 
 [ext_resource type="Script" uid="uid://boc06donexnnm" path="res://WFC/wfc_test.gd" id="1_g30l0"]
 [ext_resource type="PackedScene" uid="uid://r0td0aqhi4f7" path="res://enviroment/floors/floor_tile_small.tscn" id="1_y7kk4"]
-[ext_resource type="PackedScene" uid="uid://71rs66onl68i" path="res://3d_chara_control/player/player_3d_gravity_and_jump.tscn" id="2_pijbb"]
 [ext_resource type="PackedScene" uid="uid://bij84ol81kcts" path="res://3d_chara_control/level/interactable/kill_plane/kill_plane_3d.tscn" id="3_pijbb"]
 [ext_resource type="PackedScene" uid="uid://b5w3mcrfc1yi6" path="res://enviroment/props/chest.tscn" id="5_m30dy"]
+[ext_resource type="PackedScene" uid="uid://b4653ft3o0pfh" path="res://3d_chara_control/player/player_3d_gravity_and_jump_ortho.tscn" id="6_acvy4"]
 [ext_resource type="PackedScene" uid="uid://ciw2hwm3lvxgq" path="res://WFC/wave_function_collapse_3d.tscn" id="6_q8h8v"]
 
 [node name="WFC" type="Node3D"]
 script = ExtResource("1_g30l0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
 
 [node name="floor_tile_small" parent="." instance=ExtResource("1_y7kk4")]
 
@@ -57,13 +61,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 4)
 [node name="floor_tile_small16" parent="." instance=ExtResource("1_y7kk4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6)
 
-[node name="Player3DGravityAndJump" parent="." instance=ExtResource("2_pijbb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.84339, 0.0536193, 3.92945)
-
 [node name="KillPlane3D" parent="." instance=ExtResource("3_pijbb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.1399, 0)
 
 [node name="chest" parent="." instance=ExtResource("5_m30dy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.23337, 0.0500006, 5.67924)
+transform = Transform3D(-0.763142, 0, -0.646231, 0, 1, 0, 0.646231, 0, -0.763142, 4.23337, 0.0500006, 5.67924)
 
 [node name="WaveFunctionCollapse3D" parent="." instance=ExtResource("6_q8h8v")]
+
+[node name="Player3DGravityAndJump" parent="." instance=ExtResource("6_acvy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9307, 0.0536193, 4.10093)
