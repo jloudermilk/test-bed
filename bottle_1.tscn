@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://gdxaltq5e2tb"]
+
+[ext_resource type="PackedScene" uid="uid://c5yseo2d5bwfn" path="res://bottle1.blend" id="1_ianbp"]
+[ext_resource type="Shader" uid="uid://bsg61y3ra0k3r" path="res://glass.gdshader" id="2_0mw37"]
+[ext_resource type="Shader" uid="uid://ei0rb5qwibn2" path="res://liquid.gdshader" id="3_w0g20"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rt4iv"]
+render_priority = 0
+shader = ExtResource("2_0mw37")
+shader_parameter/glass_color = Color(0.7, 1, 0.925, 0.152941)
+shader_parameter/glint_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6jpsg"]
+render_priority = 0
+shader = ExtResource("3_w0g20")
+shader_parameter/fill_level = 0.553
+shader_parameter/liquid_color = Color(1, 0, 0, 1)
+shader_parameter/top_color = Color(1, 0.4, 0.4, 1)
+shader_parameter/emission_color = Color(1, 0, 0, 1)
+shader_parameter/emission_strength = 0.3
+shader_parameter/fresnel_power = 1.574
+shader_parameter/fresnel_intensity = 1.0
+shader_parameter/wave_amplitude = 0.02
+shader_parameter/wave_frequency = 2.0
+shader_parameter/wave_speed = 1.0
+
+[node name="bottle1" instance=ExtResource("1_ianbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Potion1" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.79134e-05, 0.000682682, 0)
+surface_material_override/0 = SubResource("ShaderMaterial_rt4iv")
+
+[node name="inside" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+surface_material_override/0 = SubResource("ShaderMaterial_6jpsg")

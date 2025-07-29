@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://mlwjhtknedek"]
+
+[sub_resource type="Gradient" id="Gradient_tugnn"]
+colors = PackedColorArray(0.729613, 0.517549, 3.85046e-07, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_csslg"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ns1u7"]
+color_ramp = SubResource("Gradient_tugnn")
+noise = SubResource("FastNoiseLite_csslg")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ojmqk"]
+albedo_color = Color(0.8, 0.749333, 0.496, 1)
+albedo_texture = SubResource("NoiseTexture2D_ns1u7")
+
+[sub_resource type="BoxMesh" id="BoxMesh_xc0j5"]
+material = SubResource("StandardMaterial3D_ojmqk")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qntyj"]
+
+[node name="PotionShop" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 0.1, 0, 0, 0, 100, 0, 0, 0)
+mesh = SubResource("BoxMesh_xc0j5")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_qntyj")

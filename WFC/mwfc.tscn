@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxr2clru8ejsq"]
+
+[ext_resource type="Script" uid="uid://cosvxaprk4vjr" path="res://WFC/mwfc.gd" id="1_wal7i"]
+[ext_resource type="Resource" uid="uid://dmetpodjqa1wm" path="res://WFC/test_wfc_res.tres" id="2_brqt0"]
+
+[node name="MWFC" type="Node3D"]
+script = ExtResource("1_wal7i")
+wfc_res = ExtResource("2_brqt0")

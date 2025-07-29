@@ -1,6 +1,6 @@
-extends Node3D
+extends GridMap
 
-class_name WaveFunctionCollapse3D
+class_name ModularWFC3D
 
 class Tile:
 	var id: int

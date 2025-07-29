@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="WFCResource" load_steps=3 format=3 uid="uid://dmetpodjqa1wm"]
+
+[ext_resource type="MeshLibrary" uid="uid://c3bbcrbvyk7xi" path="res://WFC/floor_library.tres" id="1_p2vuf"]
+[ext_resource type="Script" uid="uid://sxkknvnqidlm" path="res://WFC/mwfcTool.gd" id="1_trmvb"]
+
+[resource]
+script = ExtResource("1_trmvb")
+_mesh_lib = ExtResource("1_p2vuf")
+_health = 100.0
+_armor = 0.0
+_level = 1
+_experience = 0.0
+_is_boss = false
+metadata/_custom_type_script = ExtResource("1_trmvb")

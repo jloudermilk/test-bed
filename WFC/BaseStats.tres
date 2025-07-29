@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CustomStats" load_steps=2 format=3 uid="uid://drkkrg4mqqrub"]
+
+[ext_resource type="Script" uid="uid://dedpd15wspl23" path="res://WFC/CustomStatsTool.gd" id="1_qgopd"]
+
+[resource]
+script = ExtResource("1_qgopd")
+health = 100.0
+armor = 0.0
+level = 1
+experience = 0.0
+is_boss = false
+health = 100.0
+armor = 0.0
+level = 1
+experience = 0.0
+metadata/_custom_type_script = ExtResource("1_qgopd")
